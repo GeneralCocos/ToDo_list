@@ -1,8 +1,9 @@
 import { createElement } from "../framework/render.js";
+import { StatusLabel } from "../const.js";
 
-function createTaskListComponent() {
+function createTaskListComponent(status) {
   return `<li class="cell">
-              <h2 class="card card__header task-list__title">Бэклог</h2>
+              <h2 class="card card__header task-list__title card__${status} card__border__${status}">${StatusLabel[status]}</h2>
               <div class="tasks__list task-list__title cell">
 
               </div>
@@ -10,8 +11,13 @@ function createTaskListComponent() {
 }
 
 export default class TaskListComponent {
+
+  constructor(status) {
+    this.status = status;
+  }
+
   getTemplate() {
-    return createTaskListComponent();
+    return createTaskListComponent(this.status);
   }
 
   getElement() {

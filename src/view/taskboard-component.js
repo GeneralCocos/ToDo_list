@@ -1,8 +1,15 @@
 import { createElement } from "../framework/render.js";
 
 function createTaskBoardComponent() {
-  return `<ul class="taskboard__inner section section__second">
-          </ul>`;
+  return `
+    <div><div class="taskboard__inner section section__second">
+    </div>
+    <div class="delete">
+      <div class="card card__delete">
+        <h1>x Очистить</h1>
+      </div>
+    </div></div>
+  `;
 }
 
 export default class TaskBoardComponent {
