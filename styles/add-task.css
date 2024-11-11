@@ -21,8 +21,7 @@
     background-color: var(--color-text);
     padding: 20px 30px;
     width: 450px;
-    border-radius: var(--border-10); 
-    margin: 10px 50px 0;   
+    border-radius: var(--border-10);  
 }
 
 .new-task__buttons{

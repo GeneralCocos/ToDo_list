@@ -6,24 +6,31 @@ import {render} from '../framework/render.js';
 
 
 export default class TasksBoardPresenter {
- tasksBoardComponent = new TaskBoardComponent();
+  #tasksBoardComponent = new TaskBoardComponent();
 
+  #boardContainer = null;
+  #tasksModel = null;
+  #boardTasks = [];
 
- constructor({boardContainer, tasksModel}) {
-   this.boardContainer = boardContainer;
-   this.tasksModel = tasksModel;
- }
+  constructor({boardContainer, tasksModel}) {
+   this.#boardContainer = boardContainer;
+   this.#tasksModel = tasksModel;
+  }
 
+  init() {
+   this.#renderBoard();
+   this.#renderTask();
+  }
 
- init() {
-    this.boardTasks = [...this.tasksModel.getTasks()];
+  #renderBoard() {
+    this.#boardTasks = [...this.#tasksModel.getTasks()];
 
-   render(this.tasksBoardComponent, this.boardContainer);
+   render(this.#tasksBoardComponent, this.#boardContainer);
    for (const status of StatusArray) {
     const tasksListComponent = new TasksListComponent(status);
-    render(tasksListComponent, this.tasksBoardComponent.getElement());
+    render(tasksListComponent, this.#tasksBoardComponent.getElement());
 
-    const tasksForStatus = this.boardTasks.filter(
+    const tasksForStatus = this.#boardTasks.filter(
       (task) => task.status === status
     );
 
@@ -37,5 +44,10 @@ export default class TasksBoardPresenter {
     }
    }
  
- }
+  }
+  #renderTask(task, container) {
+   const taskComponent = new TaskComponent({ task });
+
+   render(taskComponent, container);
+  }
 }

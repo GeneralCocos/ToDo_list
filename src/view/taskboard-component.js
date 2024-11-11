@@ -1,31 +1,20 @@
-import { createElement } from "../framework/render.js";
+import { AbstractComponent } from "../framework/view/abstract-component.js";
 
-function createTaskBoardComponent() {
+function createTaskBoardComponentTemplate() {
   return `
-    <div><div class="taskboard__inner section section__second">
-    </div>
-    <div class="delete">
-      <div class="card card__delete">
-        <h1>x Очистить</h1>
+    <div>
+      <ul class="taskboard__inner section section__second"></ul>
+      <div class="delete">
+        <div class="card card__delete">
+          <h1>x Очистить</h1>
+        </div>
       </div>
-    </div></div>
+    </div>
   `;
 }
 
-export default class TaskBoardComponent {
-  getTemplate() {
-    return createTaskBoardComponent();
-  }
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
-    }
-
-    return this.element;
-  }
-
-  removeElement() {
-    this.element = null;
+export default class TaskBoardComponent extends AbstractComponent {
+  get template() {
+    return createTaskBoardComponentTemplate();
   }
 }
