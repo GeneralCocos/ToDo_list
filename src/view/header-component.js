@@ -5,7 +5,7 @@ function createHeaderComponentTemplate() {
     return (
         `<header class="header">
           <div class="header__wrapper">
-            <h1 class="header__title">Список задач</h1>
+            <h1 class="header__title title">Список задач</h1>
           </div>
         </header>`
       );

@@ -1,8 +1,8 @@
 export const Status = {
     BACKLOG: 'backlog',
-    INPROGRESS: 'process',
+    INPROGRESS: 'inprogress',
     READY: 'ready',
-    BASKET: 'trash',
+    BASKET: 'basket',
   };
   
   export const StatusLabel = {

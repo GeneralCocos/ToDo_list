@@ -11,7 +11,7 @@
     border-radius: var(--border-6);
 }
 
-.card__border__process{
+.card__border__inprogress{
     border-left: solid var(--color-text-blue);
     border-radius: var(--border-6);
 }
@@ -21,7 +21,7 @@
     border-radius: var(--border-6);
 }
 
-.card__border__trash{
+.card__border__basket{
     border-left: solid var(--color-text-red);
     border-radius: var(--border-6);
 }

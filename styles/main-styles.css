@@ -67,3 +67,8 @@ header{
     flex-direction: column;
     gap: 12px;
 }
+
+.tasks-area {
+    display: flex;
+    gap: 12px;
+}

@@ -7,7 +7,7 @@
     color: var(--color-text-gray);
 }
 
-.card__process{
+.card__inprogress{
     background-color: var(--color-text-ligth-blue);
     color: var(--color-text-blue);
 }
@@ -15,7 +15,7 @@
     background-color: var(--color-text-ligth-green);
     color: var(--color-text-green);
 }
-.card__trash{
+.card__basket{
     background-color: var(--color-text-ligth-red);
     color: var(--color-text-red);
 }
