@@ -10,7 +10,8 @@ const taskBoard = document.querySelector(".taskboard");
 
 const tasksModel = new TasksModel(); 
 
-const tasksBoardPresenter = new TasksBoardPresenter({ boardContainer: taskBoard, tasksModel });
+const tasksBoardPresenter = new TasksBoardPresenter({ boardContainer: taskBoard, tasksModel, });
+
 tasksBoardPresenter.init();
 
 function handleNewTaskSubmit(taskTitle) {

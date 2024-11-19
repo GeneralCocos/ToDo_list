@@ -66,6 +66,8 @@ header{
     display: flex;
     flex-direction: column;
     gap: 12px;
+    
+    width: 300px;
 }
 
 .tasks-area {

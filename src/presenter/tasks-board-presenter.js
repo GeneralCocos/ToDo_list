@@ -59,8 +59,13 @@ export default class TasksBoardPresenter {
     const nonBasketStatuses = StatusArray.filter(
       (status) => status !== Status.BASKET
     );
+
     for (const status of nonBasketStatuses) {
-      const tasksListComponent = new TaskListComponent(status);
+      const tasksListComponent = new TaskListComponent({
+        status,
+        onTaskDrop: this.#handleTaskDrop.bind(this),
+      });
+      console.log(status);
       tasksListComponent.element.setAttribute("data-status", status);
       render(tasksListComponent, this.#tasksBoardComponent.element);
 
@@ -75,9 +80,16 @@ export default class TasksBoardPresenter {
     }
   }
 
+  #handleTaskDrop = (taskId, newStatus) => {
+    this.#tasksModel.updateTaskStatus(taskId, newStatus);
+  };
+
   #renderBasket() {
     const status = Status.BASKET;
-    const tasksListComponent = new TaskListComponent(status);
+    const tasksListComponent = new TaskListComponent({status, onTaskDrop: this.#handleTaskDrop.bind(this),});
+    tasksListComponent.element.setAttribute("data-status", status);
+    render(tasksListComponent, this.#tasksBoardComponent.element);
+
     tasksListComponent.element.setAttribute("data-status", status);
     render(tasksListComponent, this.#tasksBoardComponent.element);
 
