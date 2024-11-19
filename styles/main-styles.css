@@ -2,15 +2,17 @@
     --color-primary: #6C38CC;
     --color-secondary: #E47AD5;
     --color-text: #FAFAFA;
-    --color-text-red: #DC143C;
+    --color-text-red: #600a1b;
     --color-text-ligth-red: #CD5C5C;
     --color-text-blue: #4682B4;
-    --color-text-ligth-blue: #40E0D0;
-    --color-text-green: #32CD32;
+    --color-text-ligth-blue: #8bf0e6;
+    --color-text-green: #278b27;
     --color-text-ligth-green: #98FB98;
-    --color-text-gray: #808080;
+    --color-text-gray: #656464;
     --color-text-ligth-gray: #C0C0C0;
+    --color-text-ligth-light-gray: #d7d7d7a9;
     
+    --border-4: 4px;
     --border-6: 6px;
     --border-10: 10px;
 }
@@ -70,7 +72,3 @@ header{
     width: 300px;
 }
 
-.tasks-area {
-    display: flex;
-    gap: 12px;
-}

@@ -19,4 +19,23 @@
     background-color: var(--color-text-ligth-red);
     color: var(--color-text-red);
 }
+.card__base{
+    background-color: var(--color-text-ligth-gray);
+}
 
+.card__empty{
+    background-color: var(--color-text-ligth-light-gray);
+    border-radius: var(--border-4);
+}
+
+.card__empty__text{
+    padding: 15px 10px;
+    margin: 0;
+}
+
+.loader{
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
