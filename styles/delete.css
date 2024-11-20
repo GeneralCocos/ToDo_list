@@ -4,6 +4,9 @@
     color: var(--color-text);
 }
 
+.card__delete:disabled{
+    background-color: var(--color-text-ligth-light-gray);
+}
 .delete{
     display:flex;
     justify-content: end;
